@@ -1,0 +1,116 @@
+
+getdata
+# query{
+#   users{
+#     edges{
+#       node{
+#         username
+#         lastName
+#         firstName
+#         dateJoined
+#         secondaryEmail
+#         id
+#         pk
+#         email
+#         isStaff
+#         isActive
+#       }
+#     }
+#   }
+# }
+
+get data
+# query{
+#   me{
+#     username
+#   }
+# }
+
+for register
+
+# mutation{
+#   register(
+#     email: "user3a@gmail.com"
+#     username: "user3a"
+#     password1: "1234567aa89"
+#     password2: "1234567aa89"
+#   ){
+#     success,
+#     errors,
+#     token,
+#     refreshToken
+#   }
+# }
+
+
+for varifyAccount 
+# mutation{
+#   varifyAccount(token:"eyJ1c2VybmFtZSI6InVzZXIzYSIsImFjdGlvbiI6ImFjdGl2YXRpb24ifQ:1o3acR:AwtYMbdUouLqelZUXJ8Oc7h0ePSYmF3nzFmsc_bnUQY"){
+#     success
+#     errors
+#   }
+# }
+
+for login
+
+# mutation{
+#   authToken(username:"user3a", password:"1234567aa89"){
+#     success,
+#     errors,
+#     token,
+#     refreshToken,
+#     user{
+#       username
+#       firstName
+#       lastName
+#       id
+#       isActive
+#     }
+#   }
+
+
+for update
+
+# mutation{
+#  updateAccount(firstName:"sdfh"){
+#   success
+#   errors
+# }
+# }
+
+
+for resend varification email
+
+# mutation{
+# 	resendActivationEmail(email:"user3@gmail.com"){
+#   success
+#   errors
+# }
+# }
+
+for forgotten password
+
+# mutation{
+# 	sendPasswordResetEmail(email:"user3@gmail.com"){
+#   success
+#   errors
+# }
+# }
+
+for reset password
+
+# check in terminal for reset password link like this  pickup the tocken after password-reset
+<p>Reset your password on the link:</p>
+
+<p>http://127.0.0.1:8000/password-reset/eyJ1c2VybmFtZSI6InVzZXIzIiwiYWN0aW9uIjoicGFzc3dvcmRfcmVzZXQifQ:1o3bfO:vMsu-TMompXqJnZjbVQ76Kn9wzzbwa1-YwqFVX7l1Fk</p>
+
+
+# mutation{
+# 	resetPassword(token:"eyJ1c2VybmFtZSI6InVzZXIzIiwiYWN0aW9uIjoicGFzc3dvcmRfcmVzZXQifQ:1o3bfO:vMsu-TMompXqJnZjbVQ76Kn9wzzbwa1-YwqFVX7l1Fk",
+#     newPassword1:"asdasd123A",
+#     newPassword2:"asdasd123A")
+#     {
+#   success
+#   errors
+# }
+# }  
