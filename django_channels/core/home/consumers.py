@@ -9,7 +9,8 @@ class TestConsumer(WebsocketConsumer):
         self.room_group_name = "test_consumer_group"
         # add room and group in the  channel layer
         async_to_sync(self.channel_layer.group_add)(  
-            self.room_name, self.room_group_name
+            self.room_group_name,
+            self.channel_name
         )
         self.accept()    # for accept connection 
         self.send(text_data=json.dumps({'status':'conneted'}))    #send data from backend
@@ -21,3 +22,8 @@ class TestConsumer(WebsocketConsumer):
     def disconnect(self, *args, **kwargs):
         print("Disconnected")
         # self.send(text_data=json.dumps({"status":'successfully disconnected'}))
+
+    def send_notification(self, event):
+        print(event)
+        data = json.loads(event.get("value"))
+        self.send(text_data=json.dumps({'paylod':data}))
