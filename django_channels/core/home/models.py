@@ -6,6 +6,16 @@ import json
 
 # Create your models here.
 
+
+class Student(models.Model):
+    student_name = models.CharField(max_length=200)
+    student_email = models.EmailField(max_length=200)
+    address = models.CharField(max_length=200)
+    age = models.IntegerField()
+
+    def __str__(self) -> str:
+        return self.student_name
+
 class Notification(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     notification = models.TextField(max_length=255)
@@ -26,3 +36,4 @@ class Notification(models.Model):
             }
         )
         super(Notification, self).save(*args, **kwargs)
+
