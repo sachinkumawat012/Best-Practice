@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form</title>
+      <link rel="icon" type="image/x-icon" href="/home/developer/Downloads/download.ico">
+      <link rel="stylesheet" href="/home/developer/Desktop/html/style.css">
+    </head>
+   <body>
+      <form id="payment">
+         <fieldset>
+            <legend>Personal Detailes</legend>
+            <ol>
+               <li>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Enter your name" required>
+               </li>
+               <li>
+                  <label for="name">Email</label>
+                  <input id="email" name="email" type="text" placeholder="Enter your email" required>
+               </li>
+               <li>
+                  <label for="name">Phone</label>
+                  <input id="phone" name="phone" type="text" placeholder="Enter your phone" required>
+               </li>
+            </ol>
+         </fieldset>
+         <fieldset>
+            <legend>Address Detailes</legend>
+            <ol>
+               <li>
+                  <label for="name">Address</label>
+                  <textarea id="address" name="address" rows="5" required></textarea>
+               </li>
+               <li>
+                  <label for="name">PostCode</label>
+                  <input id="postcode" name="postcode" type="text" placeholder="Enter your postcode">
+               </li>
+               <li>
+                  <label for="name">Country</label>
+                  <input id="country" name="country" type="text" placeholder="Enter your country name">
+               </li>
+            </ol>
+         </fieldset>
+         <fieldset>
+            <legend>Bank Detailes</legend>
+            <fieldset>
+               <legend>Card Type</legend>
+               <ol>
+                  <li>
+                     <input id="visa" name="cardchoosen" type="radio" value="VISA">
+                     <img src="/home/developer/Downloads/1200px-Visa.svg.png" alt="visa image" width="40"
+                        height="20">
+                     <label for="visa">Visa</label>
+                     <input id="amex" name="cardchoosen" type="radio" value="AMEX">
+                     <img src="/home/developer/Downloads/1200px-American_Express_logo_(2018).svg.png"
+                        alt="visa image" width="40" height="20">
+                     <label for="visa">Amex</label>
+                     <input id="mastercard" name="cardchoosen" type="radio" value="MASTERCARD">
+                     <img src="/home/developer/Downloads/MClogo-c823e495c5cf455c89ddfb0e17fc7978.jpg"
+                        alt="visa image" width="40" height="20">
+                     <label for="visa">Mastercard</label>
+                  </li>
+               </ol>
+            </fieldset>
+            <ol>
+               <li>
+                  <label for="name">CardNumber</label>
+                  <input id="cardnumber" name="cardnumber" type="text" placeholder="Enter your name">
+               </li>
+               <li>
+                  <label for="name">SecurityCode</label>
+                  <input id="securitycode" name="securitycode" type="text" placeholder="Enter your email">
+               </li>
+               <li>
+                  <label for="name">NameOnCard</label>
+                  <input id="nameoncard" name="nameoncard" type="text" placeholder="Enter your phone">
+               </li>
+            </ol>
+         </fieldset>
+         <fieldset>
+            <button type="submit">Buy it !</button>
+         </fieldset>
+      </form>
+   </body>
+</html>
